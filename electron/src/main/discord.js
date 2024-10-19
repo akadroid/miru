@@ -59,15 +59,15 @@ export default class Discord {
   }
 
   loginRPC () {
-    this.discord.login({ clientId: '954855428355915797' }).catch(() => {
-      setTimeout(() => this.loginRPC(), 5000).unref()
-    })
+    // this.discord.login({ clientId: '954855428355915797' }).catch(() => {
+    //   setTimeout(() => this.loginRPC(), 5000).unref()
+    // })
   }
 
   setDiscordRPC (data = this.defaultStatus) {
-    if (this.discord.user && data) {
-      data.pid = process.pid
-      this.discord.request('SET_ACTIVITY', data)
-    }
+    // if (this.discord.user && data) {
+    //   data.pid = process.pid
+    //   this.discord.request('SET_ACTIVITY', data)
+    // }
   }
 }
